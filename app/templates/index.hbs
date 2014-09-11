@@ -1,0 +1,12 @@
+<h2>Listing Concerts</h2>
+
+<ul>
+  {{#each concert in model}}
+    <li>{{concert.name}} - {{concert.date}}</li>
+    <ul>
+      {{#each band in concert.bands}}
+        <li>{{band.name}}</li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</ul>

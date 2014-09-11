@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HttpMockExample</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/http-mock-example.css">
+  </head>
+  <body>
+    <script>
+      window.HttpMockExampleENV = {{ENV}};
+      window.EmberENV = window.HttpMockExampleENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/http-mock-example.js"></script>
+    <script>
+      window.HttpMockExample = require('http-mock-example/app')['default'].create(HttpMockExampleENV.APP);
+    </script>
+  </body>
+</html>
